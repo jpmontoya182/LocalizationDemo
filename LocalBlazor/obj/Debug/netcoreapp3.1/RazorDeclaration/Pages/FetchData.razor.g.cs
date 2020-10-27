@@ -83,6 +83,13 @@ using Microsoft.Extensions.Configuration;
 #line hidden
 #nullable disable
 #nullable restore
+#line 11 "C:\Users\juan.montoya\Desktop\LocalizationDemo\LocalBlazor\_Imports.razor"
+using Microsoft.Extensions.Localization;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 3 "C:\Users\juan.montoya\Desktop\LocalizationDemo\LocalBlazor\Pages\FetchData.razor"
 using LocalBlazor.Data;
 

@@ -82,6 +82,13 @@ using Microsoft.Extensions.Configuration;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 11 "C:\Users\juan.montoya\Desktop\LocalizationDemo\LocalBlazor\_Imports.razor"
+using Microsoft.Extensions.Localization;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/")]
     public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -90,6 +97,7 @@ using Microsoft.Extensions.Configuration;
         {
         }
         #pragma warning restore 1998
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IStringLocalizer<App> Localizer { get; set; }
     }
 }
 #pragma warning restore 1591

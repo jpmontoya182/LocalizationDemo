@@ -82,6 +82,13 @@ using Microsoft.Extensions.Configuration;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 11 "C:\Users\juan.montoya\Desktop\LocalizationDemo\LocalBlazor\_Imports.razor"
+using Microsoft.Extensions.Localization;
+
+#line default
+#line hidden
+#nullable disable
     public partial class ChooseLanguage : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -90,7 +97,7 @@ using Microsoft.Extensions.Configuration;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 12 "C:\Users\juan.montoya\Desktop\LocalizationDemo\LocalBlazor\Shared\ChooseLanguage.razor"
+#line 18 "C:\Users\juan.montoya\Desktop\LocalizationDemo\LocalBlazor\Shared\ChooseLanguage.razor"
        
     private string selectedCulture = System.Threading.Thread.CurrentThread.CurrentCulture.Name;
     private Dictionary<string, string> cultures;
@@ -103,6 +110,11 @@ using Microsoft.Extensions.Configuration;
 
     private void RequestCultureChange()
     {
+        if (string.IsNullOrWhiteSpace(selectedCulture))
+        {
+            return;
+        }
+
         var uri = new Uri(NavigationManager.Uri)
             .GetComponents(UriComponents.PathAndQuery, UriFormat.Unescaped);
 

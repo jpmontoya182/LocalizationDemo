@@ -82,6 +82,13 @@ using Microsoft.Extensions.Configuration;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 11 "C:\Users\juan.montoya\Desktop\LocalizationDemo\LocalBlazor\_Imports.razor"
+using Microsoft.Extensions.Localization;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/counter")]
     public partial class Counter : Microsoft.AspNetCore.Components.ComponentBase
     {

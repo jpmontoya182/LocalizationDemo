@@ -5,7 +5,13 @@
 {
     <form class="form-inline">
         <select class="form-control mr-2" @bind="selectedCulture">
+            <option>Select ...</option>
+            @foreach (var culture in cultures)
+            {
+                <option value="@culture.Key">@culture.Value</option>
+            }
         </select>
+        <button class="btn btn-outline-primary" @onclick="RequestCultureChange">Change</button>
     </form>
 }
 
@@ -21,6 +27,11 @@
 
     private void RequestCultureChange()
     {
+        if (string.IsNullOrWhiteSpace(selectedCulture))
+        {
+            return;
+        }
+
         var uri = new Uri(NavigationManager.Uri)
             .GetComponents(UriComponents.PathAndQuery, UriFormat.Unescaped);
 
